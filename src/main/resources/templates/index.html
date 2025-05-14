@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Sistema Solar</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <main>
+        <article>
+            <div class="terra">
+                <img src="/images/foguete.png" alt="terra">
+                <h1>Q U I Z</h1>
+                <p>Teste seus conhecimentos sobre o nosso sistema solar!</p>
+                <div class="button">
+                    <a th:href="@{/quiz}" class="btn">Começar!</a>
+                </div>
+                <a th:href="@{/score}" class="score">Ver Placar</a>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado - Quiz Sistema Solar</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Finalizado!</h1>
+        <p>Sua pontuação: <span th:text="${pontuacao} + '/' + ${perguntas.size()}"></span></p>
+        
+        <form th:action="@{/salvar-pontuacao}" method="post">
+            <input type="hidden" name="pontuacao" th:value="${pontuacao}">
+            <div class="form-group">
+                <label for="nome">Digite seu nome para o placar:</label>
+                <input type="text" id="nome" name="nome" required 
+                       placeholder="Seu nome ou apelido" maxlength="100">
+            </div>
+            <button type="submit" class="btn">Enviar Pontuação</button>
+        </form>
+        
+        <a th:href="@{/pontuacao}" class="btn">Ver Placar de Pontuações</a>
+        <a th:href="@{/}" class="btn">Voltar ao Início</a>
+    </div>
+</body>
+</html>

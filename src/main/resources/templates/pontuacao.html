@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Placar - Quiz Sistema Solar</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Placar de Pontuações</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Posição</th>
+                    <th>Nome</th>
+                    <th>Pontuação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="usuario, stat : ${usuarios}">
+                    <td th:text="${stat.index + 1}"></td>
+                    <td th:text="${usuario.nome}"></td>
+                    <td th:text="${usuario.pontuacao}"></td>
+                </tr>
+            </tbody>
+        </table>
+        <a th:href="@{/}" class="btn">Voltar ao Início</a>
+    </div>
+</body>
+</html>

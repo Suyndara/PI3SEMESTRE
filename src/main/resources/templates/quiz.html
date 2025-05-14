@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Sistema Solar</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz do Sistema Solar</h1>
+        <div class="progresso" th:if="${perguntas != null}">
+            <span th:text="${perguntaAtual.id} + '/' + ${perguntas.size()}"></span>
+        </div>
+        <div class="pergunta" th:if="${perguntaAtual != null}">
+            <h2 th:text="${perguntaAtual.texto}"></h2>
+            <form th:action="@{/quiz}" method="post">
+                <input type="hidden" name="perguntaId" th:value="${perguntaAtual.id}">
+                <div class="alternativas">
+                    <label>
+                        <input type="radio" name="resposta" th:value="${perguntaAtual.alternativaA}" required>
+                        <span th:text="${perguntaAtual.alternativaA}"></span>
+                    </label>
+                    <label>
+                        <input type="radio" name="resposta" th:value="${perguntaAtual.alternativaB}">
+                        <span th:text="${perguntaAtual.alternativaB}"></span>
+                    </label>
+                    <label>
+                        <input type="radio" name="resposta" th:value="${perguntaAtual.alternativaC}">
+                        <span th:text="${perguntaAtual.alternativaC}"></span>
+                    </label>
+                    <label>
+                        <input type="radio" name="resposta" th:value="${perguntaAtual.alternativaD}">
+                        <span th:text="${perguntaAtual.alternativaD}"></span>
+                    </label>
+                </div>
+                <button type="submit" class="btn">
+                    <span th:if="${perguntaAtual.id < perguntas.size()}">Próxima</span>
+                    <span th:unless="${perguntaAtual.id < perguntas.size()}">Finalizar</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
