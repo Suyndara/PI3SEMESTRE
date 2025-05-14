@@ -1,25 +1,88 @@
 /* Estilos básicos */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+
+@font-face {
+    font-family: "Nasa";
+    src: url(../fonts/NasalizationRg.otf);
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100%;
+
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+th{
+    color: white;
+}
+
+.container{
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+
+    background-image: url(../images/background_sa.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sub-container{
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100%;
+
+    backdrop-filter: blur(10px);
+}
+
+.placar{
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 40%;
+    height: 500px;
+
+    border: 1px solid black;
+    border-radius: 20px;
+
+    box-shadow: 5px 0px 50px 10px black;
+
+    padding: 20px;
+}
+
 h1 {
     text-align: center;
-    color: #2c3e50;
+    color: white;
+
+    font-family: "Nasa";
 }
 
 /* Estilos do botão */
@@ -107,6 +170,8 @@ table th, table td {
 table th {
     background-color: #3498db;
     color: white;
+
+    font-family: "Nasa";
 }
 
 table tr:nth-child(even) {
@@ -114,5 +179,9 @@ table tr:nth-child(even) {
 }
 
 table tr:hover {
-    background-color: #e6e6e6;
+    background-color: purple;
+}
+
+table tr td{
+    color: white;
 }
