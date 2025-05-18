@@ -10,8 +10,10 @@
 
 main {
     display: flex;
+
     height: 100vh;
     width: 100%;
+
     background-image: url("/images/background.gif");
     background-position: center;
     background-repeat: no-repeat;
@@ -22,8 +24,10 @@ article {
     display: flex;
     align-items: center;
     justify-content: center;
+
     height: 100vh;
     width: 100%;
+
     backdrop-filter: blur(5px);
 }
 
@@ -78,19 +82,22 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+
     margin-top: 50px;
     background: linear-gradient(90deg, rgba(0,32,171,1) 0%, rgba(50,9,121,0.9) 54%, rgba(153,0,255,1) 100%);
+    
     height: 50px;
     width: 70%;
-    border-radius: 25px;
-    transition: .3s;
+
+    border-radius: 10px;
+    transition: .1s;
 }
 
 .button a {
     color: white;
     font-size: 30px;
     text-decoration: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Nasa";
 }
 
 .button:hover {
@@ -103,6 +110,6 @@ p {
         box-shadow: 5px 0px 50px 10px black;
     }
     to {
-        box-shadow: 5px 0px 50px 10px purple;
+        box-shadow: 5px 0px 50px 10px rgb(155, 42, 155);
     }
 }

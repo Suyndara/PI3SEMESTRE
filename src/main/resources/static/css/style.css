@@ -88,19 +88,26 @@ h1 {
 /* Estilos do botão */
 .btn {
     display: inline-block;
-    background: #3498db;
+    background: linear-gradient(90deg, rgba(0,32,171,1) 0%, rgba(50,9,121,0.9) 54%, rgba(153,0,255,1) 100%);
+
     color: #fff;
+
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
+
     cursor: pointer;
     text-decoration: none;
+
     font-size: 16px;
+    font-family: "Nasa";
     margin-top: 10px;
+    transition: .1s;
 }
 
 .btn:hover {
-    background: #2980b9;
+    box-shadow: 0px 0px 20px 3px black;
+    transform: scale(1.1);
 }
 
 /* Estilos do quiz */
