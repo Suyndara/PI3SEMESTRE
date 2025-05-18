@@ -168,14 +168,13 @@ table th, table td {
 }
 
 table th {
-    background-color: #3498db;
     color: white;
 
     font-family: "Nasa";
 }
 
 table tr:nth-child(even) {
-    background-color: #f2f2f2;
+
 }
 
 table tr:hover {
@@ -184,4 +183,6 @@ table tr:hover {
 
 table tr td{
     color: white;
+
+    border: 1px solid white;
 }
