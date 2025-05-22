@@ -1,175 +1,181 @@
-* {
-    margin: 0;
-    padding: 0;
+/* Estilos básicos */
+
+@font-face {
+    font-family: "Nasa";
+    src: url(../fonts/NasalizationRg.otf);
+}
+
+*{
+    margin: 0px;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 main {
     display: flex;
 
-    height: 100vh;
-    widows: 100%;
-
-    justify-content: center;
-    align-items: center;
-
-    background-image: url(../images/background.gif);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.quiz-container {
-    display: flex;
-
     flex-direction: column;
-
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 8px 30px 20px rgb(0, 0, 0);
-    text-align: center;
-    width: 80%;
-    max-width: 500px;
+    height: 100vh;
+    width: 100%;
 
-    backdrop-filter: blur(20px);
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-h1,
-p {
+th{
     color: white;
 }
 
-#pergunta-texto {
-    font-size: 18px;
-    margin-bottom: 15px;
+.container{
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.opcoes {
+.container{
+    height: 100vh;
+    width: 100%;
+
+    background-image: url(../images/background_sa.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sub-container{
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100%;
+
+    backdrop-filter: blur(10px);
+}
+
+.placar{
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 40%;
+    height: 500px;
+
+    border: 1px solid black;
+    border-radius: 20px;
+
+    box-shadow: 5px 0px 50px 10px black;
+
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+
+    font-family: "Nasa";
+}
+
+/* Estilos do botão */
+.btn {
+    display: inline-block;
+    background: linear-gradient(90deg, rgba(0,32,171,1) 0%, rgba(50,9,121,0.9) 54%, rgba(153,0,255,1) 100%);
+
+    color: #fff;
+
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-family: "Nasa";
+    margin-top: 10px;
+    transition: .1s;
+}
+
+.btn:hover {
+    box-shadow: 0px 0px 20px 3px black;
+    transform: scale(1.1);
+}
+
+/* Estilos do quiz */
+.progresso {
+    text-align: right;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.pergunta h2 {
+    margin-bottom: 20px;
+}
+
+.alternativas {
     display: flex;
     flex-direction: column;
     gap: 10px;
-
-    width: 100%;
-
-    margin: 20px;
+    margin-bottom: 20px;
 }
 
-
-
-.custom-btn {
-    width: 130px;
-    height: 40px;
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px 25px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
-        7px 7px 20px 0px rgba(0, 0, 0, .1),
-        4px 4px 5px 0px rgba(0, 0, 0, .1);
-    outline: none;
-}
-
-button {
-    margin: 20px;
-}
-
-.btn-12 {
-    position: relative;
-    right: 20px;
-    bottom: 20px;
-    border: none;
-    box-shadow: none;
-    width: 150px;
-    height: 40px;
-    line-height: 42px;
-    -webkit-perspective: 230px;
-    perspective: 230px;
-}
-
-.btn-12 span {
-    background: rgb(0, 170, 255);
-    background: linear-gradient(40deg, rgb(0, 102, 255) 0%, rgb(172, 2, 251) 100%);
-    display: block;
-    position: absolute;
-    width: 150px;
-    height: 40px;
-    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
-        7px 7px 20px 0px rgba(0, 0, 0, .1),
-        4px 4px 5px 0px rgba(0, 0, 0, .1);
-    border-radius: 5px;
-    margin: 0;
-    text-align: center;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-}
-
-.btn-12 span:nth-child(1) {
-    -webkit-transform: rotateX(90deg);
-    -moz-transform: rotateX(90deg);
-    transform: rotateX(90deg);
-    -webkit-transform-origin: 50% 50% -20px;
-    -moz-transform-origin: 50% 50% -20px;
-    transform-origin: 50% 50% -20px;
-}
-
-.btn-12 span:nth-child(2) {
-    -webkit-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-    transform: rotateX(0deg);
-    -webkit-transform-origin: 50% 50% -20px;
-    -moz-transform-origin: 50% 50% -20px;
-    transform-origin: 50% 50% -20px;
-}
-
-.btn-12:hover span:nth-child(1) {
-    -webkit-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-    transform: rotateX(0deg);
-}
-
-.btn-12:hover span:nth-child(2) {
-    color: transparent;
-    -webkit-transform: rotateX(-90deg);
-    -moz-transform: rotateX(-90deg);
-    transform: rotateX(-90deg);
-}
-
-.perguntacont {
+.alternativas label {
     display: flex;
-
-    height: 100%;
-    width: 100%;
-
     align-items: center;
-    justify-content: center;
-
-    margin: 20px;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.btn-fix span:nth-child(1) {
-    transform: rotateX(0deg) !important;
+.alternativas label:hover {
+    background: purple;
 }
 
-.btn-fix span:nth-child(2) {
-    transform: rotateX(-90deg) !important;
-    color: transparent !important;
-    
+/* Estilos do formulário */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilos da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    color: white;
+
+    font-family: "Nasa";
 }
