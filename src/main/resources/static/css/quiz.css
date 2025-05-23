@@ -1,5 +1,3 @@
-/* Estilos básicos */
-
 @font-face {
     font-family: "Nasa";
     src: url(../fonts/NasalizationRg.otf);
@@ -10,34 +8,13 @@
     box-sizing: border-box;
 }
 
-main {
-    display: flex;
-
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    height: 100vh;
-    width: 100%;
-
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-th{
-    color: white;
-}
-
 .container{
     display: flex;
 
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
 
-.container{
     height: 100vh;
     width: 100%;
 
@@ -60,24 +37,6 @@ th{
     backdrop-filter: blur(10px);
 }
 
-.placar{
-    display: flex;
-
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    width: 40%;
-    height: 500px;
-
-    border: 1px solid black;
-    border-radius: 20px;
-
-    box-shadow: 5px 0px 50px 10px black;
-
-    padding: 20px;
-}
-
 h1 {
     text-align: center;
     color: white;
@@ -85,7 +44,6 @@ h1 {
     font-family: "Nasa";
 }
 
-/* Estilos do botão */
 .btn {
     display: inline-block;
     background: linear-gradient(90deg, rgba(0,32,171,1) 0%, rgba(50,9,121,0.9) 54%, rgba(153,0,255,1) 100%);
@@ -110,7 +68,6 @@ h1 {
     transform: scale(1.1);
 }
 
-/* Estilos do quiz */
 .progresso {
     text-align: right;
     font-weight: bold;
@@ -130,11 +87,14 @@ h1 {
 
 .alternativas label {
     display: flex;
+
     align-items: center;
     gap: 10px;
+
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+
     cursor: pointer;
 }
 
@@ -142,40 +102,24 @@ h1 {
     background: purple;
 }
 
-/* Estilos do formulário */
 .form-group {
     margin-bottom: 15px;
 }
 
 .form-group label {
     display: block;
+
     margin-bottom: 5px;
     font-weight: bold;
 }
 
 .form-group input {
     width: 100%;
+
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    
     box-sizing: border-box;
 }
 
-/* Estilos da tabela */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-table th, table td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-table th {
-    color: white;
-
-    font-family: "Nasa";
-}
