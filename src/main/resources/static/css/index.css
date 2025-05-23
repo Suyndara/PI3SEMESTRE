@@ -49,11 +49,14 @@ p {
 
 .terra {
     display: flex;
+
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     
     height: 85vh;
     width: 30%;
+
     backdrop-filter: blur(40px);
     transition: .1s;
     border-radius: 20px;
