@@ -55,7 +55,7 @@ p {
     align-items: center;
     justify-content: center;
     
-    height: 90%;
+    height: 85%;
     width: 30%;
 
     backdrop-filter: blur(40px);
@@ -74,7 +74,6 @@ p {
     height: 290px;
     transition: .4s;
     margin-bottom: 30px;
-
 }
 
 .terra h1 {
