@@ -8,6 +8,57 @@
     box-sizing: border-box;
 }
 
+form{
+        display: flex;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h2, span{
+    font-family: "Nasa";
+    color: white;
+}
+
+label > input[type="radio"] {
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: var(white);
+      margin: 0;
+
+      font: inherit;
+      color: white;
+      width: 1.15em;
+      height: 1.15em;
+      border: 0.15em solid white;
+      border-radius: 50%;
+      transform: translateY(-0.075em);
+
+      display: grid;
+      place-content: center;
+    }
+
+    label > input[type="radio"]::before {
+      content: "";
+      width: 0.65em;
+      height: 0.65em;
+      border-radius: 50%;
+      transform: scale(0);
+      transition: 120ms transform ease-in-out;
+      box-shadow: inset 1em 1em var(--form-control-color);
+      background-color: white;
+    }
+
+    label > input[type="radio"]:checked::before {
+      transform: scale(1);
+    }
+
+    label > input[type="radio"]:focus {
+      outline: max(2px, 0.15em) solid white;
+      outline-offset: max(2px, 0.15em);
+    }
+
 .container{
     display: flex;
 
@@ -45,7 +96,6 @@ h1 {
 }
 
 .btn {
-    display: inline-block;
     background: linear-gradient(90deg, rgba(0,32,171,1) 0%, rgba(50,9,121,0.9) 54%, rgba(153,0,255,1) 100%);
 
     color: #fff;
@@ -82,6 +132,8 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    width: 450px;
     margin-bottom: 20px;
 }
 
@@ -122,4 +174,3 @@ h1 {
     
     box-sizing: border-box;
 }
-
