@@ -22,6 +22,7 @@ main {
 
 article {
     display: flex;
+    
     align-items: center;
     justify-content: center;
 
@@ -52,6 +53,7 @@ p {
 
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     
     height: 90%;
     width: 30%;
@@ -69,12 +71,15 @@ p {
 }
 
 .terra img {
-    height: 280px;
+    height: 290px;
     transition: .4s;
+    margin-bottom: 19%;
+
 }
 
 .terra h1 {
     color: white;
+
     font-size: 32px;
     text-align: center;
     font-family: "nasa";
