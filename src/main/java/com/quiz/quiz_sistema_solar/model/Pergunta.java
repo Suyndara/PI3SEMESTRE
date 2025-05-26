@@ -1,4 +1,4 @@
-package com.quiz.quiz_sistema_solar.model;
+/*package com.quiz.quiz_sistema_solar.model;
 
 import jakarta.persistence.*;
 
@@ -36,10 +36,10 @@ public class Pergunta {
 
     public String getRespostaCorreta() { return respostaCorreta; }
     public void setRespostaCorreta(String respostaCorreta) { this.respostaCorreta = respostaCorreta; }
-}
+}*/
 
 
-/*package com.quiz.quiz_sistema_solar.model;
+package com.quiz.quiz_sistema_solar.model;
 
 import jakarta.persistence.*;
 
@@ -69,4 +69,4 @@ public class Pergunta {
     public void setAlternativaD(String alternativaD) { this.alternativaD = alternativaD; }
     public String getRespostaCorreta() { return respostaCorreta; }
     public void setRespostaCorreta(String respostaCorreta) { this.respostaCorreta = respostaCorreta; }
-}*/
+}
