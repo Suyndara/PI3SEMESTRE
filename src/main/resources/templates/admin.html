@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Administração do Quiz</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body>
+    <h1>Administração - Perguntas do Quiz</h1>
+    <a href="/admin/nova">Nova Pergunta</a>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Pergunta</th>
+            <th>Ações</th>
+        </tr>
+        <tr th:each="pergunta : ${perguntas}">
+            <td th:text="${pergunta.id}"></td>
+            <td th:text="${pergunta.texto}"></td>
+            <td>
+                <a th:href="@{'/admin/editar/' + ${pergunta.id}}">Editar</a> |
+                <a th:href="@{'/admin/excluir/' + ${pergunta.id}}" 
+                   onclick="return confirm('Tem certeza que deseja excluir?');">Excluir</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
