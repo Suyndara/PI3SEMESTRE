@@ -1,9 +1,11 @@
 package com.quiz.quiz_sistema_solar.service;
 
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
 import com.quiz.quiz_sistema_solar.model.Pergunta;
 import com.quiz.quiz_sistema_solar.repository.PerguntaRepository;
-import org.springframework.stereotype.Service;
-import java.util.List;
 
 @Service
 public class PerguntaService {
@@ -17,7 +19,7 @@ public class PerguntaService {
         return perguntaRepository.findAll();
     }
 
-    public Pergunta getPerguntaById(Long id) {
+    public Pergunta getPerguntaById(Integer id) {
         return perguntaRepository.findById(id).orElse(null);
     }
 
@@ -25,33 +27,11 @@ public class PerguntaService {
         return perguntaRepository.save(pergunta);
     }
 
-    public void excluirPergunta(Long id) {
+    public void atualizarPergunta(Pergunta pergunta) {
+        perguntaRepository.save(pergunta);
+    }
+
+    public void excluirPergunta(int id) {
         perguntaRepository.deleteById(id);
     }
 }
-
-/*package com.quiz.quiz_sistema_solar.service;
-
-import com.quiz.quiz_sistema_solar.model.Pergunta;
-import com.quiz.quiz_sistema_solar.repository.PerguntaRepository;
-import org.springframework.stereotype.Service;
-import java.util.List;
-
-@Service
-public class PerguntaService {
-    private final PerguntaRepository perguntaRepository;
-
-    public PerguntaService(PerguntaRepository perguntaRepository) {
-        this.perguntaRepository = perguntaRepository;
-    }
-
-    public List<Pergunta> getPerguntas() {
-        return perguntaRepository.findAll();
-    }
-
-    public Pergunta getPerguntaById(Long id) {
-        return perguntaRepository.findById(id).orElse(null);
-    }
-
-    
-}/*  */

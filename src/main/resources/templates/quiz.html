@@ -10,7 +10,7 @@
     <div class="container">
         <h1>Quiz do Sistema Solar</h1>
         <div class="progresso" th:if="${perguntas != null}">
-            <span th:text="${perguntaAtual.id} + '/' + ${perguntas.size()}"></span>
+            <span th:text="${posicaoAtual} + '/' + ${perguntas.size()}"></span>
         </div>
         <div class="pergunta" th:if="${perguntaAtual != null}">
             <h2 th:text="${perguntaAtual.texto}"></h2>

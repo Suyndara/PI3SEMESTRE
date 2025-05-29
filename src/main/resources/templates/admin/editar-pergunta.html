@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Editar Pergunta</title>
+    <link rel="stylesheet" href="/src/main/resources/static/css/adm.css" />
+</head>
+<body>
+
+<h1>Editar Pergunta</h1> 
+
+<!-- RANIELLY -->
+
+
+<form th:action="@{'/admin/perguntas/editar/' + ${pergunta.id}}" method="post" th:object="${pergunta}">
+    <div>
+        <label for="texto">Texto da Pergunta:</label>
+        <input type="text" id="texto" name="texto" th:value="*{texto}" required />
+    </div>
+
+    <div>
+        <label for="alternativaA">Alternativa A:</label>
+        <input type="text" id="alternativaA" name="alternativaA" th:value="*{alternativaA}" required />
+    </div>
+
+    <div>
+        <label for="alternativaB">Alternativa B:</label>
+        <input type="text" id="alternativaB" name="alternativaB" th:value="*{alternativaB}" required />
+    </div>
+
+    <div>
+        <label for="alternativaC">Alternativa C:</label>
+        <input type="text" id="alternativaC" name="alternativaC" th:value="*{alternativaC}" required />
+    </div>
+
+    <div>
+        <label for="alternativaD">Alternativa D:</label>
+        <input type="text" id="alternativaD" name="alternativaD" th:value="*{alternativaD}" required />
+    </div>
+
+    <div>
+        <label for="respostaCorreta">Resposta Correta (texto):</label>
+        <input type="text" id="respostaCorreta" name="respostaCorreta" th:value="*{respostaCorreta}" required />
+    </div>
+
+    <div>
+        <button type="submit">Salvar</button>
+        <a href="/admin/perguntas">Cancelar</a>
+    </div>
+</form>
+</body>
+</html>
+

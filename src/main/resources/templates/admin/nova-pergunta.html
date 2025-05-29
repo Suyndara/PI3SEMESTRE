@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nova Pergunta</title>
+    <link rel="stylesheet" href="/css/adm.css">
+</head>
+<body>
+
+    <!-- RANIELLY -->
+
+
+    <h1>Nova Pergunta</h1>
+
+    <form th:action="@{/admin/perguntas/nova}" th:object="${pergunta}" method="post">
+        <label for="texto">Texto da Pergunta:</label>
+        <input type="text" id="texto" th:field="*{texto}" required>
+        <br>
+
+        <label for="alternativaA">Alternativa A:</label>
+        <input type="text" id="alternativaA" th:field="*{alternativaA}" required>
+        <br>
+
+        <label for="alternativaB">Alternativa B:</label>
+        <input type="text" id="alternativaB" th:field="*{alternativaB}" required>
+        <br>
+
+        <label for="alternativaC">Alternativa C:</label>
+        <input type="text" id="alternativaC" th:field="*{alternativaC}" required>
+        <br>
+
+        <label for="alternativaD">Alternativa D:</label>
+        <input type="text" id="alternativaD" th:field="*{alternativaD}" required>
+        <br>
+
+        <label for="respostaCorreta">Resposta Correta:</label>
+        <input type="text" id="respostaCorreta" name="respostaCorreta" th:value="*{respostaCorreta}" required />
+        <br><br>
+
+        <button type="submit">Salvar</button>
+        <a th:href="@{/admin/perguntas}">Cancelar</a>
+    </form>
+</body>
+</html>
