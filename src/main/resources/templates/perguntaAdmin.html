@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${pergunta.id != null} ? 'Editar Pergunta' : 'Nova Pergunta'">Pergunta</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body>
+    <h1 th:text="${pergunta.id != null} ? 'Editar Pergunta' : 'Nova Pergunta'"></h1>
+    <form th:action="@{/admin/salvar}" method="post" th:object="${pergunta}">
+        <input type="hidden" th:field="*{id}"/>
+        <label>Texto da Pergunta:</label>
+        <input type="text" th:field="*{texto}" required/><br/>
+        <label>Alternativa A:</label>
+        <input type="text" th:field="*{alternativaA}" required/><br/>
+        <label>Alternativa B:</label>
+        <input type="text" th:field="*{alternativaB}" required/><br/>
+        <label>Alternativa C:</label>
+        <input type="text" th:field="*{alternativaC}" required/><br/>
+        <label>Alternativa D:</label>
+        <input type="text" th:field="*{alternativaD}" required/><br/>
+        <label>Resposta Correta:</label>
+        <input type="text" th:field="*{respostaCorreta}" required/><br/><br/>
+        <button type="submit">Salvar</button>
+        <a href="/admin">Cancelar</a>
+    </form>
+</body>
+</html>
