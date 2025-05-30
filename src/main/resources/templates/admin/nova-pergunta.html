@@ -1,44 +1,50 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <title>Nova Pergunta</title>
-    <link rel="stylesheet" href="/css/adm.css">
+    <link rel="stylesheet" href="/css/nova-pergunta.css">
 </head>
 <body>
-
-    <!-- RANIELLY -->
-
 
     <h1>Nova Pergunta</h1>
 
     <form th:action="@{/admin/perguntas/nova}" th:object="${pergunta}" method="post">
-        <label for="texto">Texto da Pergunta:</label>
-        <input type="text" id="texto" th:field="*{texto}" required>
-        <br>
+        <div>
+            <label for="texto">Texto da Pergunta:</label>
+            <input type="text" id="texto" th:field="*{texto}" required>
+        </div>
 
-        <label for="alternativaA">Alternativa A:</label>
-        <input type="text" id="alternativaA" th:field="*{alternativaA}" required>
-        <br>
+        <div>
+            <label for="alternativaA">Alternativa A:</label>
+            <input type="text" id="alternativaA" th:field="*{alternativaA}" required>
+        </div>
 
-        <label for="alternativaB">Alternativa B:</label>
-        <input type="text" id="alternativaB" th:field="*{alternativaB}" required>
-        <br>
+        <div>
+            <label for="alternativaB">Alternativa B:</label>
+            <input type="text" id="alternativaB" th:field="*{alternativaB}" required>
+        </div>
 
-        <label for="alternativaC">Alternativa C:</label>
-        <input type="text" id="alternativaC" th:field="*{alternativaC}" required>
-        <br>
+        <div>
+            <label for="alternativaC">Alternativa C:</label>
+            <input type="text" id="alternativaC" th:field="*{alternativaC}" required>
+        </div>
 
-        <label for="alternativaD">Alternativa D:</label>
-        <input type="text" id="alternativaD" th:field="*{alternativaD}" required>
-        <br>
+        <div>
+            <label for="alternativaD">Alternativa D:</label>
+            <input type="text" id="alternativaD" th:field="*{alternativaD}" required>
+        </div>
 
-        <label for="respostaCorreta">Resposta Correta:</label>
-        <input type="text" id="respostaCorreta" name="respostaCorreta" th:value="*{respostaCorreta}" required />
-        <br><br>
+        <div>
+            <label for="respostaCorreta">Resposta Correta:</label>
+            <input type="text" id="respostaCorreta" name="respostaCorreta" th:value="*{respostaCorreta}" required />
+        </div>
 
-        <button type="submit">Salvar</button>
-        <a th:href="@{/admin/perguntas}">Cancelar</a>
+        <div class="botoes">
+            <button type="submit">Salvar</button>
+            <a th:href="@{/admin/perguntas}">Cancelar</a>
+        </div>
     </form>
+
 </body>
 </html>
