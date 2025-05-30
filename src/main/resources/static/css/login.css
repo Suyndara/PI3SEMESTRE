@@ -13,34 +13,47 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
 }
 
-/* Container geral */
-.container {
+/* Botão sair */
+a {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #81ecec;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Container do formulário */
+form {
     background-color: rgba(0, 0, 64, 0.85);
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
     width: 100%;
-    max-width: 550px;
+    max-width: 400px;
+    box-sizing: border-box;
 }
 
 /* Título */
-h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #ffffff;
+h2 {
     font-family: "nasa";
-}
-
-/* Formulário */
-form div {
+    text-align: center;
     margin-bottom: 20px;
+    color: #ffffff;
 }
 
+/* Labels */
 label {
     display: block;
     margin-bottom: 6px;
@@ -48,7 +61,9 @@ label {
     color: #dddddd;
 }
 
-input[type="text"] {
+/* Inputs */
+input[type="email"],
+input[type="password"] {
     width: 100%;
     padding: 10px;
     border: none;
@@ -56,17 +71,14 @@ input[type="text"] {
     background-color: #4c4c77;
     color: white;
     font-size: 16px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
 }
 
-/* Botões */
-.botoes {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
+/* Botão */
 button {
-    padding: 10px 24px;
+    width: 100%;
+    padding: 10px;
     background-color: #504646;
     color: white;
     border: none;
@@ -79,12 +91,10 @@ button:hover {
     background-color: #574b90;
 }
 
-a {
-    color: #81ecec;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-a:hover {
-    text-decoration: underline;
+/* Mensagem de erro */
+p {
+    color: #ff4d4d;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
 }
