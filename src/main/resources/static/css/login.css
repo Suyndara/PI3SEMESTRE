@@ -9,7 +9,7 @@
 }
 
 body{
-    background-image: url(../images/sun.webp);
+    background-image: url(../images/planets.gif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -90,7 +90,7 @@ input[type="password"] {
 button {
     width: 100%;
     padding: 10px;
-    background: linear-gradient(90deg, rgb(255, 213, 0) 0%, rgba(255, 174, 0, 0.9) 54%, rgb(255, 140, 0) 100%);
+    background: linear-gradient(90deg, rgb(255, 111, 0) 0%, rgba(255, 68, 0, 0.9) 54%, rgb(255, 0, 0) 100%);
     color: white;
     border: none;
     border-radius: 8px;
@@ -111,6 +111,6 @@ p {
 }
 
 form:hover{
-    box-shadow: 0px 0px 20px 10px rgb(255, 213, 0);
+    box-shadow: 0px 0px 20px 10px rgb(255, 98, 0);
     backdrop-filter: blur(10px);
 }
