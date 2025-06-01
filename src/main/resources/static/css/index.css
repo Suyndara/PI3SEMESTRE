@@ -11,7 +11,7 @@
 main {
     display: flex;
 
-    height: 100vh;
+    height: auto;
     width: 100%;
 
     background-image: url("/images/background.gif");
@@ -26,7 +26,9 @@ article {
     align-items: center;
     justify-content: center;
 
-    height: 100vh;
+    flex-direction: column;
+
+    height: 130vh;
     width: 100%;
 
     backdrop-filter: blur(5px);
@@ -45,7 +47,7 @@ p {
     font-size: 20px;
     text-align: center;
     font-family: "nasa";
-    margin-top: 32px;
+    margin-top: 50px;
 }
 
 .terra {
