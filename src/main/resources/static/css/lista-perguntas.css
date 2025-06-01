@@ -1,4 +1,62 @@
+@font-face {
+    font-family: "Nasa";
+    src: url(../fonts/NasalizationRg.otf);
+}
+
 *{
     margin: 0px;
+    border: 0px;
     box-sizing: border-box;
 }
+
+body{
+    display: flex;
+}
+
+h1{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+table{
+    height: 80vh;
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.45);
+
+    margin-top: 50px;
+}
+
+thead a{
+    height: 20px;
+    background: linear-gradient(90deg, rgba(0, 32, 171, 1) 0%, rgba(50, 9, 121, 0.9) 54%, rgba(153, 0, 255, 1) 100%);
+}
+
+
+th, td{
+    border-bottom: 1px solid white;
+}
+
+
+th, a, td, h1{
+    color: white;
+    font-family: "Nasa";
+}
+
+main{
+    display: flex;
+
+    height: auto;
+    width: 100%;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(../images/background_sa.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+

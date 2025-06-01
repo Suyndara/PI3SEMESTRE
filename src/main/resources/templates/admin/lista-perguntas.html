@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8" />
     <title>Lista de Perguntas</title>
     <link rel="stylesheet" href="/src/main/resources/static/css/adm.css" />
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/lista-perguntas.css">
 </head>
+
 <body>
     <!-- MATHEUS  -->
-<h1>Lista de Perguntas</h1>
+    <main>
+        <h1>Lista de Perguntas</h1>
 
-<table>
-    <thead>
-        <a th:href="@{/}">Voltar para o Início</a>
-        <br>
-        <a th:href="@{/admin/perguntas/nova}">Nova Pergunta</a>
-        <tr>
-            <th>ID</th>
-            <th>Texto</th>
-            <th>Alternativa A</th>
-            <th>Alternativa B</th>
-            <th>Alternativa C</th>
-            <th>Alternativa D</th>
-            <th>Resposta Correta</th>
-            <th>Ações</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr th:each="pergunta : ${perguntas}">
-            <td th:text="${pergunta.id}">1</td>
-            <td th:text="${pergunta.texto}">Texto da pergunta</td>
-            <td th:text="${pergunta.alternativaA}">Alternativa A</td>
-            <td th:text="${pergunta.alternativaB}">Alternativa B</td>
-            <td th:text="${pergunta.alternativaC}">Alternativa C</td>
-            <td th:text="${pergunta.alternativaD}">Alternativa D</td>
-            <td th:text="${pergunta.respostaCorreta}">Resposta correta</td>
-            <td>
-            <!-- Botão Editar -->
-            <a th:href="@{'/admin/perguntas/editar/' + ${pergunta.id}}" class="btn btn-edit">Editar</a>
-            <!-- Botão Remover -->
-            <a th:href="@{'/admin/perguntas/remover/' + ${pergunta.id}}" class="btn btn-delete" onclick="
+        <table>
+            <thead>
+                <a th:href="@{/}">Voltar para o Início</a>
+                <br>
+                <a th:href="@{/admin/perguntas/nova}">Nova Pergunta</a>
+                <tr>
+                    <th>ID</th>
+                    <th>Texto</th>
+                    <th>Alternativa A</th>
+                    <th>Alternativa B</th>
+                    <th>Alternativa C</th>
+                    <th>Alternativa D</th>
+                    <th>Resposta Correta</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="pergunta : ${perguntas}">
+                    <td th:text="${pergunta.id}">1</td>
+                    <td th:text="${pergunta.texto}">Texto da pergunta</td>
+                    <td th:text="${pergunta.alternativaA}">Alternativa A</td>
+                    <td th:text="${pergunta.alternativaB}">Alternativa B</td>
+                    <td th:text="${pergunta.alternativaC}">Alternativa C</td>
+                    <td th:text="${pergunta.alternativaD}">Alternativa D</td>
+                    <td th:text="${pergunta.respostaCorreta}">Resposta correta</td>
+                    <td>
+                        <!-- Botão Editar -->
+                        <a th:href="@{'/admin/perguntas/editar/' + ${pergunta.id}}" class="btn btn-edit">Editar</a>
+                        <!-- Botão Remover -->
+                        <a th:href="@{'/admin/perguntas/remover/' + ${pergunta.id}}" class="btn btn-delete" onclick="
             return confirm('Tem certeza que deseja remover esta pergunta?');"> Remover </a>
-            </td>
-        </tr>
-    </tbody>
-</table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
 </body>
+
 </html>
