@@ -9,7 +9,7 @@
 }
 
 body{
-    background-image: url("/images/background.gif");
+    background-image: url(../images/sun.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -47,13 +47,13 @@ a:hover {
 
 /* Container do formulário */
 form {
-    background-color: rgba(0, 0, 64, 0.85);
+    background-color: rgba(0, 0, 0, 0.374);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgb(0, 0, 0);
     width: 100%;
     max-width: 400px;
     box-sizing: border-box;
+    transition: .3s;
 }
 
 /* Título */
@@ -90,7 +90,7 @@ input[type="password"] {
 button {
     width: 100%;
     padding: 10px;
-    background: linear-gradient(90deg, rgba(0,32,171,1) 0%, rgba(50,9,121,0.9) 54%, rgba(153,0,255,1) 100%);
+    background: linear-gradient(90deg, rgb(255, 213, 0) 0%, rgba(255, 174, 0, 0.9) 54%, rgb(255, 140, 0) 100%);
     color: white;
     border: none;
     border-radius: 8px;
@@ -99,7 +99,7 @@ button {
 }
 
 button:hover {
-    background-color: #574b90;
+    background-color: #ff9100;
 }
 
 /* Mensagem de erro */
@@ -108,4 +108,9 @@ p {
     font-weight: bold;
     text-align: center;
     margin-top: 10px;
+}
+
+form:hover{
+    box-shadow: 0px 0px 20px 10px rgb(255, 213, 0);
+    backdrop-filter: blur(10px);
 }

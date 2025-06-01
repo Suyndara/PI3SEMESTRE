@@ -9,7 +9,7 @@
 }
 
 body{
-    background-image: url(../images/planets.gif);
+    background-image: url(../images/background_sa.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -45,7 +45,7 @@ main{
     box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.578);
 }
 
-h1, p, a, label{
+h1, p, a, label, button{
     font-family: "Nasa";
     color: white;
 }
@@ -79,6 +79,8 @@ button, a{
     border-radius: 10px;
     margin-bottom: 20px;
 
+    background-color: none;
+
     width: 300px;
     transition: .3s;
 
@@ -96,6 +98,17 @@ button:hover, a:hover{
     box-shadow: 0px 0px 20px 10px black;
 }
 
+button{
+    border-style: none;
+}
+
 label, input{
     margin-bottom: 20px;
+    text-align: center;
+}
+
+input{
+    height: 40px;
+    border-radius: 10px;
+    border-style: none;
 }
