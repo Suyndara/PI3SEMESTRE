@@ -3,20 +3,31 @@
     src: url("/fonts/NasalizationRg.otf");
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', sans-serif;
-    height: 100vh;
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
     background-image: url("/images/background.gif");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
+    backdrop-filter: blur(10px);
+    width: 100%;
 }
 
 /* Botão sair */
@@ -24,7 +35,7 @@ a {
     position: absolute;
     top: 20px;
     right: 30px;
-    color: #81ecec;
+    color: white;
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
@@ -39,7 +50,7 @@ form {
     background-color: rgba(0, 0, 64, 0.85);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgb(0, 0, 0);
     width: 100%;
     max-width: 400px;
     box-sizing: border-box;
@@ -79,7 +90,7 @@ input[type="password"] {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #504646;
+    background: linear-gradient(90deg, rgba(0,32,171,1) 0%, rgba(50,9,121,0.9) 54%, rgba(153,0,255,1) 100%);
     color: white;
     border: none;
     border-radius: 8px;
