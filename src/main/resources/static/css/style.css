@@ -180,10 +180,6 @@ table th {
     font-family: "Nasa";
 }
 
-table tr:nth-child(even) {
-
-}
-
 table tr:hover {
     background: linear-gradient(90deg, rgba(0,32,171,1) 0%, rgba(50,9,121,0.9) 54%, rgba(153,0,255,1) 100%);
 }
