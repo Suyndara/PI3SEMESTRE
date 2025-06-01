@@ -23,9 +23,12 @@ table{
     border: 1px solid white;
     border-radius: 20px;
     width: 80%;
+    
     background-color: rgba(0, 0, 0, 0.45);
+    box-shadow: 5px 0px 50px 10px black;
 
     margin-top: 50px;
+    backdrop-filter: blur(20px);
 }
 
 thead a{
