@@ -1,0 +1,48 @@
+@font-face {
+    font-family: "Nasa";
+    src: url(../fonts/NasalizationRg.otf);
+}
+
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../images/planets.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+
+main{
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid white;
+    border-radius: 20px;
+
+    height: 80vh;
+    width: 60%;
+
+    background-color: rgba(0, 0, 0, 0.267);
+    box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.578);
+}
+
