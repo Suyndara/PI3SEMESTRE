@@ -7,9 +7,9 @@
 </head>
 <body>
 
-    <h1>Nova Pergunta</h1>
-
     <form th:action="@{/admin/perguntas/nova}" th:object="${pergunta}" method="post">
+        <h1>Nova Pergunta</h1>
+
         <div>
             <label for="texto">Texto da Pergunta:</label>
             <input type="text" id="texto" th:field="*{texto}" required>
@@ -37,7 +37,7 @@
 
         <div>
             <label for="respostaCorreta">Resposta Correta:</label>
-            <input type="text" id="respostaCorreta" name="respostaCorreta" th:value="*{respostaCorreta}" required />
+            <input type="text" id="respostaCorreta" name="respostaCorreta" th:field="*{respostaCorreta}" required />
         </div>
 
         <div class="botoes">

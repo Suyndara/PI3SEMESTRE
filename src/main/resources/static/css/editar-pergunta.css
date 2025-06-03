@@ -1,5 +1,3 @@
-/* Fundo animado com tema espacial */
-
 @font-face {
     font-family: "nasa";
     src: url("/fonts/NasalizationRg.otf");
@@ -10,7 +8,7 @@ body {
     padding: 0;
     font-family: 'Segoe UI', sans-serif;
     height: 100vh;
-    background-image: url("/images/background.gif");
+    background-image: url("/images/sun.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,25 +18,25 @@ body {
     color: white;
 }
 
-/* Container geral */
 .container {
-    background-color: rgba(0, 0, 64, 0.85);
+    background-color: rgba(178, 178, 195, 0.1);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 25px rgba(138, 180, 255, 0.7); /* brilho em volta */
     width: 100%;
     max-width: 550px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3); /* reforça o contorno */
 }
 
-/* Título */
 h1 {
     text-align: center;
     margin-bottom: 30px;
     color: #ffffff;
     font-family: "nasa";
+    text-shadow: 0 0 6px #81ecec; /* brilho leve no texto */
 }
 
-/* Formulário */
 form div {
     margin-bottom: 20px;
 }
@@ -47,7 +45,7 @@ label {
     display: block;
     margin-bottom: 6px;
     font-weight: bold;
-    color: #dddddd;
+    color: #f2f2f2;
 }
 
 input[type="text"] {
@@ -58,27 +56,38 @@ input[type="text"] {
     background-color: #4c4c77;
     color: white;
     font-size: 16px;
+    transition: box-shadow 0.3s;
 }
 
-/* Botões */
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 8px #81ecec;
+}
+
 .botoes {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 20px;
 }
 
 button {
-    padding: 10px 24px;
-    background-color: #504646;
+    padding: 12px 28px;
+    background-color: #706fd3;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 17px;
+    font-weight: bold;
+    box-shadow: 0 0 10px #81ecec;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 
 button:hover {
-    background-color: #574b90;
+    background-color: #9980fa;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #81ecec;
 }
 
 a {
@@ -88,5 +97,6 @@ a {
 }
 
 a:hover {
+    color: #00cec9;
     text-decoration: underline;
 }

@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "nasa";
+    src: url("/fonts/NasalizationRg.otf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    background-image: url("/images/planets.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+form {
+    background-color: rgba(178, 178, 195, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(138, 180, 255, 0.7);
+    width: 100%;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-family: "nasa";
+    margin-bottom: 30px;
+    text-shadow: 0 0 6px #81ecec;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #f2f2f2;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #4c4c77;
+    color: white;
+    font-size: 16px;
+    transition: box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 8px #81ecec;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 28px;
+    background-color: #706fd3;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    box-shadow: 0 0 10px #81ecec;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #9980fa;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #81ecec;
+}
+
+a {
+    color: #81ecec;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #00cec9;
+    text-decoration: underline;
+}
