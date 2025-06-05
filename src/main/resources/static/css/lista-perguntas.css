@@ -11,6 +11,11 @@
 
 body{
     display: flex;
+
+    background-image: url(../images/planets.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 h1{
@@ -22,7 +27,7 @@ table{
     height: 80vh;
     border: 1px solid white;
     border-radius: 20px;
-    width: 80%;
+    width: 85%;
     
     background-color: rgba(0, 0, 0, 0.45);
     box-shadow: 5px 0px 50px 10px black;
@@ -39,8 +44,8 @@ thead a{
 
 th, td{
     border-bottom: 1px solid white;
+    text-align: center;
 }
-
 
 th, a, td, h1{
     color: white;
@@ -57,9 +62,6 @@ main{
     align-items: center;
     justify-content: center;
 
-    background-image: url(../images/planets.gif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
+    backdrop-filter: blur(20px);
 }
 
