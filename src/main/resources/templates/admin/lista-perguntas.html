@@ -39,9 +39,7 @@
                     <td th:text="${pergunta.alternativaD}">Alternativa D</td>
                     <td th:text="${pergunta.respostaCorreta}">Resposta correta</td>
                     <td>
-                        <!-- Botão Editar -->
                         <a th:href="@{'/admin/perguntas/editar/' + ${pergunta.id}}" class="btn btn-edit">Editar</a>
-                        <!-- Botão Remover -->
                         <a th:href="@{'/admin/perguntas/remover/' + ${pergunta.id}}" class="btn btn-delete" onclick="
             return confirm('Tem certeza que deseja remover esta pergunta?');"> Remover </a>
                     </td>

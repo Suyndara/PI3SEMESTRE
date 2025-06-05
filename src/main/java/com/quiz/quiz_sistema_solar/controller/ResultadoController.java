@@ -21,7 +21,7 @@ public class ResultadoController {
             Model model) {
         
         if (perguntas == null) {
-            // Se não houver perguntas na sessão, redireciona para o início
+            
             return "redirect:/";
         }
         

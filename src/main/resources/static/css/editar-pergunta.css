@@ -22,11 +22,11 @@ body {
     background-color: rgba(178, 178, 195, 0.1);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 0 25px rgba(138, 180, 255, 0.7); /* brilho em volta */
+    box-shadow: 0 0 25px rgba(138, 180, 255, 0.7); 
     width: 100%;
     max-width: 550px;
     backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.3); /* reforça o contorno */
+    border: 2px solid rgba(255, 255, 255, 0.3); 
 }
 
 h1 {
@@ -34,7 +34,7 @@ h1 {
     margin-bottom: 30px;
     color: #ffffff;
     font-family: "nasa";
-    text-shadow: 0 0 6px #81ecec; /* brilho leve no texto */
+    text-shadow: 0 0 6px #81ecec; 
 }
 
 form div {

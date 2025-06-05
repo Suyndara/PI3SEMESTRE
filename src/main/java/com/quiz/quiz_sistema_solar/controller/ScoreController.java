@@ -14,7 +14,6 @@ public class ScoreController {
         this.usuarioService = usuarioService;
     }
 
-    // Rota para salvar a pontuação (vinda do resultado.html)
     @PostMapping("/salvar-pontuacao")
     public String salvarPontuacao(@RequestParam String nome, @RequestParam Integer pontuacao) {
         Usuario usuario = new Usuario();
@@ -22,18 +21,16 @@ public class ScoreController {
         usuario.setPontuacao(pontuacao);
         usuarioService.setUsuario(usuario);
         System.out.println("Enviou ao banco: " + nome + ", e pontuação: " + pontuacao);
-        return "redirect:/pontuacao";  // Redireciona para o placar
+        return "redirect:/pontuacao";  
 
     }
 
-    // Rota para exibir o placar de pontuações
     @GetMapping("/pontuacao")
     public String mostrarScoreboard(Model model) {
         model.addAttribute("usuarios", usuarioService.getRanking());
         return "pontuacao";
     }
 
-    // Mantendo a rota original /score para compatibilidade
     @GetMapping("/score")
     public String redirecionarScoreboard() {
         return "redirect:/pontuacao";

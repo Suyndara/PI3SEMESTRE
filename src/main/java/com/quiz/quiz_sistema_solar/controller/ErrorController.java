@@ -10,7 +10,6 @@ public class ErrorController implements org.springframework.boot.web.servlet.err
 
     @RequestMapping("/error")
     public String handleError(HttpServletRequest request) {
-        // Lógica para lidar com diferentes tipos de erros
-        return "redirect:/"; // Redireciona para a página inicial em caso de erro
+        return "redirect:/";
     }
 }
