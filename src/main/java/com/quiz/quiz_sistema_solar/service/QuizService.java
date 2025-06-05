@@ -20,12 +20,10 @@ public class QuizService {
         carregarPerguntas();
     }
 
-    // Carrega todas as perguntas do banco
     private void carregarPerguntas() {
         perguntas = perguntaRepository.findAll();
     }
 
-    // Retorna a próxima pergunta aleatória
     public Pergunta getProximaPergunta() {
         if (perguntas == null || perguntas.isEmpty()) {
             throw new IllegalStateException("Não há perguntas disponíveis");
@@ -36,7 +34,6 @@ public class QuizService {
         return perguntas.get(indiceAleatorio);
     }
 
-    // Verifica se a resposta está correta e atualiza a pontuação
     public void verificarResposta(String respostaUsuario, Pergunta perguntaAtual) {
         if (perguntaAtual.getRespostaCorreta().equalsIgnoreCase(respostaUsuario)) {
             pontuacao++;
